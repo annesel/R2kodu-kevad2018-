@@ -833,7 +833,7 @@ Töölaual on olemas kaks andmestikku:
 
 *** =instructions
 
-- **Ülesanne 1** Liida andmestikud id-koodi tunnuse põhjal, nimeta ühendatud andmestik nimega `uuring2`. Tulemuseks olevas andmestikus peaks olema ainult need uuritavad, kelle kohta on teada sugu, elukoht, vanus, pikkus, kaal, käte siruulatus,  arstivisiidi toimumine, uurignugrupi tunnus ning testitulemused. 
+- **Ülesanne 1** Liida andmestikud id-koodi tunnuse põhjal, nimeta ühendatud andmestik nimega `uuring2`. Tulemuseks olevas andmestikus peaks olema ainult need uuritavad, kelle kohta on teada sugu, elukoht, vanus, pikkus, kaal, käte siruulatus,  arstivisiidi toimumine, uurignugrupi tunnus ning testitulemused. St need objektid, kelle kohta on mõlemas andmestikus info olemas.
 
 - **Ülesanne 2** Tekita liidetud andmestikku veel üks sootunnus `sugu2`: uuel tunnusel lisa sootunnuse koodidele sildid: kood `0` vastab naissoole, määra siia silt `Naine`, koodile `1` lisa silt `Mees`.
 
@@ -855,9 +855,6 @@ Töölaual on olemas kaks andmestikku:
 A <- read.csv2("http://kodu.ut.ee/~annes/R/A.csv", nrows = 45)
 B <- read.csv2("http://kodu.ut.ee/~annes/R/B.csv", nrows = 160)
 B <- B[, c("id", "grupp", sort(names(B)[-(1:2)]))]
-
-
-
 ```
 
 *** =sample_code
@@ -876,7 +873,6 @@ tabel1 <- table(_____, ______)
 tabel2 <-  ______________
 
 
-
 # Ülesanne 5: Naiste arv grupis c
 c.naisi <- __________
 
@@ -888,10 +884,8 @@ c.naisi <- __________
 # Ülesanne 1:  Liida andmestikud, tulemuses olgu kõik isikud kel on mõlemas andmestikus info olemas.
 uuring2 <-  merge(A, B, by = "id", all = FALSE)
 
-
 # Ülesanne 2: faktortunnuse loomine
 uuring2$sugu2 <- factor(uuring2$sugu, labels = c("Naine", "Mees"))
-
 
 # Ülesanne 3: Sagedustabel
 tabel1 <- table(uuring2$grupp, uuring2$sugu2)
@@ -900,7 +894,6 @@ tabel1
 # Ülesanne 4: Jaotustabel
 tabel2 <-  prop.table(tabel1, 1)
 tabel2
-
 
 # Ülesanne 5: Naiste arv grupis c
 c.naisi <- 1
