@@ -544,11 +544,12 @@ Uurida tuleb vaatlusobjektide kattuvust. Loe tähelepanelikult ülesannete tekst
 *** =instructions
 
 - **Ülesanne 1** Kontrolli id-koodi põhjal ja sobivat hulgatehet kasutades, millised isikud esinevad andmestikus `B`, kuid mitte andmestikus `A`. Omista nende isikute id-koodidide  vektor muutujale `olemasBmitteA`.
-- **Ülesanne 2** Kontrolli id-koodi põhjal, millised isikud esinevad mõlemas andmestikus. Omista nende isikute id-koodide tähestiku järgi kahanevalt järjestatud vektor muutujale `AjaB`.
+- **Ülesanne 2** Kontrolli id-koodi põhjal, millised isikud esinevad mõlemas andmestikus. Omista nende isikute id-koodide tähestiku järgi kahanevalt järjestatud vektor muutujale `AjaB`. Vektori sorteerimiseks kasuta käsku `sort`, kaheneva järjestuse määramiseks muuda argumendi `decreasing` väärtust.
 
 
 *** =hint
-- vektori sorteerimiseks kasuta käsku `sort`, kaheneva järjestuse määramiseks muuda argumendi `decreasing` väärtust.
+- esimeses ülesandes tuleks leida hulkade vahe.
+- teises ülesandes saab kasutada ühisosa funktsiooni.
 
 
 
