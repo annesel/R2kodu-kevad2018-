@@ -2,7 +2,7 @@
 title       : Andmete importimine
 description : Esimene teema - andmete viimine R-i
 --- type:NormalExercise lang:r xp:100 skills:3 key:2c2b6bf80e
-## Andmete import 1
+## Andmete import 1 
 
 
 Andmete impordiks tekstifailist saab kasutada käsku `read.table()`. 
@@ -13,12 +13,12 @@ Funktsiooni `read.table()` argumentide abil saab paika panna, mis on imporditava
 
 *** =instructions
 
-- **Ülesanne 1** Kasutades käsku `read.table()` impordi R-i fail *katsed.txt* aadressilt  *http://kodu.ut.ee/~annes/R/katsed.txt*, omista andmestik muutujale `andmed1`. Prindi andmestik ekraanile
+- **Ülesanne 1** Kasutades käsku `read.table()` impordi R-i fail nimega *katsed.txt* aadressilt  *http://kodu.ut.ee/~annes/R/katsed.txt*, omista andmestik muutujale `andmed1`. Prindi andmestik ekraanile.
 - **Ülesanne 2** Vaata andmestiku struktuuri käsuga `str()`.
 
 
 *** =hint
-- Ava fail brauseri aknas ja vaata, mis on veergude eraldaja.
+- Ava fail brauseri aknas ja vaata, mis on veergude eraldaja. 
 - Imporditud andmetabelis peab olema 6 vaatlust ja 3 tunnust.
 
 
@@ -31,7 +31,7 @@ Funktsiooni `read.table()` argumentide abil saab paika panna, mis on imporditava
 ```{r}
 # Ülesanne 1: Impordi andmed, moodustades objekti andmed1. Prindi saadud objekt ekraanile
 andmed1 <- read.table(_________________________________)
-
+__________
 
 
 # Ülesanne 2: Vaata andmestiku struktuuri
@@ -106,7 +106,7 @@ test_function_result(name = "str",
 
 
 #
-success_msg("Tubli! Pane tähele, et impordil tekkisid väga pikad tunnusenimed. Seega nõuavad imporditavad failid vahel ka eeltööd. Siin oleks eelnevalt tulnud tunnusenimesid kohendada, need peaks olema sisukad, kuid võimalusel mitte väga pikad. Veerupäises olevad tühikud ja erisümbolid teisendatakse punktideks.")
+success_msg("Tubli! Pane tähele, et impordil tekkisid väga pikad tunnusenimed. Seega nõuavad imporditavad failid vahel ka eeltööd. Siin oleks eelnevalt tulnud tekstifailis tunnusenimesid kohendada, need peaks olema sisukad, kuid võimalusel mitte väga pikad. Veerupäistes olevad tühikud ja erisümbolid teisendatakse punktideks. Teine võimalus oleks argumendi `col.names` abil tunnustele uued nimed ette anda.")
 
  
 
@@ -116,10 +116,7 @@ success_msg("Tubli! Pane tähele, et impordil tekkisid väga pikad tunnusenimed.
 ## Andmete import 2
 
 
-Andmete impordiks tekstifailist saab kasutada käsku `read.table()`. 
-
-Funktsiooni `read.table()` argumentide abil saab paika panna, mis on imporditavas failis veergude eraldaja, mis sümbolit kasutatakse kümnendkoha määramisel, kas veergudel on olemas nimed jne.
-
+Impordi andmed tekstifailist *http://kodu.ut.ee/~annes/R/tulemused.txt*. Failis on kirjas inimeste nimed ja nende testitulemused.  Pööra tähelepanu sellele, mis on failis tunnuseveergude eraldaja ning kuidas on esitatud murdarvud.
 
 
 *** =instructions
@@ -262,7 +259,7 @@ Seejärel vali õige vastusevariant.
 - Funktsiooni `read.csv` argumentide vaikeväärtused määravad, et imporditavas failis peab kümnendemurru eraldajaks olema koma.
 
 *** =hint
-- Funktsiooni argumentide vaikeväärtuste leidmiseks vaata abilehelt **Usage** plokist funktsiooni argumente, kui argumendil on võrdusmärgiga omistatud mingi väärtus, siis see ongi vaikeväärtus, mida funtksioon kasutab, kui kasutaja ei ole määranud teisiti. Näiteks funktsiooni `read.table` korral: `read.table(file, header = FALSE, dec = ".", ...)` saame, et faili nimel pole vaikeväärtust, selle peab kasutaja ise määrama, aga vaikimisi eeldab funktsioon, et veergudel pole päist(`header = FALSE`) ning kümnedekoha eraldajaks on vaikimisi punkt (`dec = "."`). 
+- Funktsiooni argumentide vaikeväärtuste leidmiseks vaata abilehelt **Usage** plokist funktsiooni argumente, kui argumendil on võrdusmärgiga omistatud mingi väärtus, siis see ongi vaikeväärtus, mida funktsioon kasutab, kui kasutaja ei ole määranud teisiti. Näiteks funktsiooni `read.table` korral: `read.table(file, header = FALSE, dec = ".", ...)` saame, et faili nimel pole vaikeväärtust, selle peab kasutaja ise määrama, aga vaikimisi eeldab funktsioon, et veergudel pole päist(`header = FALSE`) ning kümnedekoha eraldajaks on vaikimisi punkt (`dec = "."`). 
  
 
 *** =pre_exercise_code
@@ -306,7 +303,7 @@ Impordi andmed failist *A.csv*.
 - **Ülesanne 1** Loe funktsioonide `read.csv()` ja `read.csv2()` abilehte. Tee kindlaks, mis argumendi abil saab määrata maksimaalse imporditava ridade arvu. Omista selle argumendi nimi stringina muutujale nimega `argumendinimi`.
 - **Ülesanne 2**: Kontrolli, kas fail *A.csv*  on juba töökaustas olemas, kasuta selleks käsku `list.files()`. Tulemuseks peab olema faili nimi. Faili saad vaadata ka aadressil *http://kodu.ut.ee/~annes/R/A.csv*  
 - **Ülesanne 3**: Impordi failist *A.csv* andmed, kasuta selleks funktsiooni `read.csv()` või `read.csv2()`, vali see funktsioon, mille korral pead vähem argumente väärtustama st see, mis argumentide vaikeväärtuste poolest paremini sobib.  Omista andmestik muutujale `andmed4`.  Pane tähele, et failis on andmeteploki all kommentaaritekst, mille peab importimisel välja jätma.
-- **Ülesanne 4**: Omista muutujale `valik` andmestikust `andmed4` esimesed 10 rida ja kõik veerud väljaarvatud neljas ja viies. Prindi ekraanile. 
+- **Ülesanne 4**: Omista muutujale `valik` andmestikust `andmed4` esimesed 10 rida ja kõik veerud väljaarvatud neljas ja viies. Prindi see ekraanile. 
 
 
 *** =hint
@@ -419,8 +416,8 @@ test_data_frame("valik",
                 columns = c( "id",   "sugu",   "vanus",    "kasv",   "kaal",   "sirutus"),
                 eq_condition = "equal",
                 undefined_msg = "Andmestik `valik` on defineerimata.",
-                undefined_cols_msg = "Kontrolli, mis tunnused on andmestikus `valik`.",
-                incorrect_msg = "Objekti `valik` väärtus ei ole korrektne. Proovi uuesti.") 
+                undefined_cols_msg = "Kontrolli, mis tunnused on andmestikus `valik`. Praegune valik ei vasta ülesandes nõutule.",
+                incorrect_msg = "Objekti/andmestiku `valik` väärtus ei ole korrektne. Proovi uuesti.") 
 
  
 
@@ -488,7 +485,7 @@ tail(andmed5a[ , ___:___ ])
 
 
 # Ülesanne 2: tee antud koodi vajalik täiendus, prindi tulemus ekraanile
-andmed5 <-  read.csv2(file = "B.csv", ________________)
+andmed5 <- read.csv2(file = "B.csv", ________________)
 
 
 # Ülesanne 3: vali andmestikust nõutud alamosa
@@ -510,7 +507,7 @@ tail(andmed5a[ , 1:5 ])
 
 
 # Ülesanne 2: tee antud koodi vajalik täiendus, prindi tulemus ekraanile
-andmed5 <-  read.csv2(file = "B.csv",   nrows = 160, stringsAsFactors = FALSE)
+andmed5 <- read.csv2(file = "B.csv", nrows = 160, stringsAsFactors = FALSE)
 
 
 # Ülesanne 3: vali andmestikust nõutud alamosa

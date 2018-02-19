@@ -2,7 +2,7 @@
 title       : Toimingud andmestikuga
 description : Insert the chapter description here
 --- type:NormalExercise lang:r xp:100 skills:3 key:e952bf341c
-## Andmete filtreerimine 1
+## Andmete filtreerimine tingimuse põhjal
 
 Kasutame andmestikku `pojad`. Mõõdetud on perede esimese ja teise poja pea pikkus ja laius. Mõõtmised on millimeetrites. Tunnused andmestikus on järgmised:
 
@@ -124,11 +124,11 @@ success_msg("Tubli!")
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:3 key:6ebe6ecdf4
-## Andmete filtreerimine 2
+## Andmete filtreerimine, tingimuste kombineerimine
 
 Kasutame admestikku `kapsad`. Uuritud on kahe kapsasordi kapsapeade kaalu ja vitamiinide sisaldust.  Tunnused andmestikus on järgmised:
 
-- `Cult` -    kapsa sort 
+- `Cult` -  kapsa sort 
 - `Date` - külvikuupäev: 16., 20. või 21. kuupäev
 - `HeadWt` - kapsapea kaal, kg
 - `VitC` - kapsapea C-vitamiini sisaldus
@@ -255,14 +255,14 @@ test_data_frame("kapsad1",
                 eq_condition = "equal",
                 undefined_msg = "Andmestik `kapsad1` on defineerimata.",
                 undefined_cols_msg = "Kontrolli, mis tunnused on andmestikus `kapsad1`.",
-                incorrect_msg = "Andmestik `kapsad1` ei vasta tingimustele. Proovi uuesti.") 
+                incorrect_msg = "Andmestik `kapsad1` ei vasta tingimustele. Proovi uuesti. Valikusse peavad sattuma need objektid, mille korral on täidetud mõlemad tingimused.") 
 #4
 test_data_frame("kapsad2",  
                 columns = c("Cult",   "Date" ,  "HeadWt", "VitC" ),
                 eq_condition = "equal",
                 undefined_msg = "Andmestik `kapsad2` on defineerimata.",
                 undefined_cols_msg = "Kontrolli, mis tunnused on andmestikus `kapsad2`.",
-                incorrect_msg = "Andmestik `kapsad2` ei vasta tingimustele. Proovi uuesti.") 
+                incorrect_msg = "Andmestik `kapsad2` ei vasta tingimustele. Proovi uuesti. Valikusse peavad sattuma need objektid, mille korral on täidetud vähemalt üks tingimus.") 
 
     
  
