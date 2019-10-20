@@ -1,33 +1,36 @@
 ---
-title       : Andmete importimine
-description : Esimene teema - andmete viimine R-i
---- type:NormalExercise lang:r xp:100 skills:3 key:2c2b6bf80e
-## Andmete import 1 
+title: 'Andmete importimine'
+description: 'Esimene teema - andmete viimine R-i'
+---
 
+## Andmete import 1
+
+```yaml
+type: NormalExercise
+key: 2c2b6bf80e
+lang: r
+xp: 100
+skills: 3
+```
 
 Andmete impordiks tekstifailist saab kasutada käsku `read.table()`. 
 
 Funktsiooni `read.table()` argumentide abil saab paika panna, mis on imporditavas failis veergude eraldaja, mis sümbolit kasutatakse kümnendkoha määramisel, kas veergudel on olemas nimed jne.
 
-
-
-*** =instructions
-
+`@instructions`
 - **Ülesanne 1** Kasutades käsku `read.table()` impordi R-i fail nimega *katsed.txt* aadressilt  *http://kodu.ut.ee/~annes/R/katsed.txt*, omista andmestik muutujale `andmed1`. Prindi andmestik ekraanile.
 - **Ülesanne 2** Vaata andmestiku struktuuri käsuga `str()`.
 
-
-*** =hint
+`@hint`
 - Ava fail brauseri aknas ja vaata, mis on veergude eraldaja. 
 - Imporditud andmetabelis peab olema 6 vaatlust ja 3 tunnust.
 
-
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 # Ülesanne 1: Impordi andmed, moodustades objekti andmed1. Prindi saadud objekt ekraanile
 andmed1 <- read.table(_________________________________)
@@ -41,7 +44,7 @@ __________
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 # Ülesanne 1: Impordi andmed, moodustades objekti andmed1. Prindi saadud objekt ekraanile
 andmed1 <- read.table("http://kodu.ut.ee/~annes/R/katsed.txt", header = T, sep = "\t")
@@ -55,7 +58,7 @@ str(andmed1)
 
 ```
 
-*** =sct
+`@sct`
 ```{r}
 # 1
 test_function(name = "read.table",
@@ -112,31 +115,35 @@ success_msg("Tubli! Pane tähele, et impordil tekkisid väga pikad tunnusenimed.
 
 ```
 
---- type:NormalExercise lang:r xp:100 skills:3 key:8369286757
+---
+
 ## Andmete import 2
 
+```yaml
+type: NormalExercise
+key: 8369286757
+lang: r
+xp: 100
+skills: 3
+```
 
 Impordi andmed tekstifailist *http://kodu.ut.ee/~annes/R/tulemused.txt*. Failis on kirjas inimeste nimed ja nende testitulemused.  Pööra tähelepanu sellele, mis on failis tunnuseveergude eraldaja ning kuidas on esitatud murdarvud.
 
-
-*** =instructions
-
+`@instructions`
 - **Ülesanne 1** Kasutades käsku `read.table()` impordi R-i fail *tulemused.txt* aadressilt  *http://kodu.ut.ee/~annes/R/tulemused.txt*, omista andmestik muutujale `andmed2`. Prindi andmestik ekraanile
 - **Ülesanne 2** Vaata andmestiku tunnuste ülevaadet käsuga `summary()`.
 
-
-*** =hint
+`@hint`
 - Ava fail brauseri aknas ja vaata, mis on veergude eraldaja ja milline sümbol on kümnendkohtade eraldajaks.
 - Kaldkriipsu `\` saad eraldajana esitada nii `sep = "\\"`.
 - Andmetabelis on 5 vaatlust ja 2 tunnust, üks tekstiline ja üks arvuline.
 
-
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 # Ülesanne 1: Impordi andmed, moodustades objekti andmed2. Prindi saadud objekt ekraanile
 andmed2 <- read.table(_________________________________)
@@ -150,7 +157,7 @@ andmed2 <- read.table(_________________________________)
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 # Ülesanne 1: Impordi andmed, moodustades objekti andmed2. Prindi saadud objekt ekraanile
 andmed2 <- read.table("http://kodu.ut.ee/~annes/R/tulemused.txt", header = T, sep = "\\", dec = ",")
@@ -164,7 +171,7 @@ summary(andmed2)
 
 ```
 
-*** =sct
+`@sct`
 ```{r}
 # 1
 #test_function_result(name = "read.table",
@@ -225,18 +232,17 @@ test_function_result(name = "summary",
 success_msg("Hästi! Liigu järgmise ülesande juurde.")
 ```
 
+---
 
-
-
-
-
-
-
-
-
-
---- type:MultipleChoiceExercise lang:r xp:50 skills:3 key:d7c15a630f
 ## Andmete import  3
+
+```yaml
+type: MultipleChoiceExercise
+key: d7c15a630f
+lang: r
+xp: 50
+skills: 3
+```
 
 Vaata abiinfot funktsioonile `read.csv`. Selleks kirjuta käsureale:
 
@@ -249,25 +255,21 @@ Loe avanevast failist funktsiooni argumentide ja töö kirjeldust.
 
 Seejärel vali õige vastusevariant.
 
-
-
-
-*** =instructions
+`@possible_answers`
 - Funktsiooni `read.csv` argumentide vaikeväärtused määravad, et imporditavas failis peab väljaeraldajaks olema semikoolon.
 - Funktsiooni `read.csv` ei saa kasutada *.txt*-laiendiga faili importimiseks.
 - Funktsiooni `read.csv` argumentide vaikeväärtused määravad, et imporditavas failis peab kümnendemurru eraldajaks olema punkt.
 - Funktsiooni `read.csv` argumentide vaikeväärtused määravad, et imporditavas failis peab kümnendemurru eraldajaks olema koma.
 
-*** =hint
-- Funktsiooni argumentide vaikeväärtuste leidmiseks vaata abilehelt **Usage** plokist funktsiooni argumente, kui argumendil on võrdusmärgiga omistatud mingi väärtus, siis see ongi vaikeväärtus, mida funktsioon kasutab, kui kasutaja ei ole määranud teisiti. Näiteks funktsiooni `read.table` korral: `read.table(file, header = FALSE, dec = ".", ...)` saame, et faili nimel pole vaikeväärtust, selle peab kasutaja ise määrama, aga vaikimisi eeldab funktsioon, et veergudel pole päist(`header = FALSE`) ning kümnedekoha eraldajaks on vaikimisi punkt (`dec = "."`). 
- 
+`@hint`
+- Funktsiooni argumentide vaikeväärtuste leidmiseks vaata abilehelt **Usage** plokist funktsiooni argumente, kui argumendil on võrdusmärgiga omistatud mingi väärtus, siis see ongi vaikeväärtus, mida funktsioon kasutab, kui kasutaja ei ole määranud teisiti. Näiteks funktsiooni `read.table` korral: `read.table(file, header = FALSE, dec = ".", ...)` saame, et faili nimel pole vaikeväärtust, selle peab kasutaja ise määrama, aga vaikimisi eeldab funktsioon, et veergudel pole päist(`header = FALSE`) ning kümnedekoha eraldajaks on vaikimisi punkt (`dec = "."`).
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 
 ```
 
-*** =sct
+`@sct`
 ```{r}
 msg1 = "Vale vastus! Selle funktsiooni korral on veergude eraldaja  `sep` vaikeväärtus koma."
 msg2 = "Vale vastus! Ka *txt.*-laiendiga failid saab selle funktsiooniga R-i importida."
@@ -277,50 +279,41 @@ msg4 = "Vale vastus! Selle funktsiooni korral on kümnendemurru eraldaja `dec` v
 test_mc(correct = 3, feedback_msgs = c(msg1, msg2, msg3, msg4))
 ```
 
+---
 
-
-
-
-
-
-
-
-
-
-
-
-
---- type:NormalExercise lang:r xp:100 skills:3 key:02d3d1b32a
 ## Andmete import 4
+
+```yaml
+type: NormalExercise
+key: 02d3d1b32a
+lang: r
+xp: 100
+skills: 3
+```
 
 Funktsioonide `read.csv()` ja `read.csv2()` kasutamine.
 
 
 Impordi andmed failist *A.csv*.
 
-
-*** =instructions
+`@instructions`
 - **Ülesanne 1** Loe funktsioonide `read.csv()` ja `read.csv2()` abilehte. Tee kindlaks, mis argumendi abil saab määrata maksimaalse imporditava ridade arvu. Omista selle argumendi nimi stringina muutujale nimega `argumendinimi`.
 - **Ülesanne 2**: Kontrolli, kas fail *A.csv*  on juba töökaustas olemas, kasuta selleks käsku `list.files()`. Tulemuseks peab olema faili nimi. Faili saad vaadata ka aadressil *http://kodu.ut.ee/~annes/R/A.csv*  
 - **Ülesanne 3**: Impordi failist *A.csv* andmed, kasuta selleks funktsiooni `read.csv()` või `read.csv2()`, vali see funktsioon, mille korral pead vähem argumente väärtustama st see, mis argumentide vaikeväärtuste poolest paremini sobib.  Omista andmestik muutujale `andmed4`.  Pane tähele, et failis on andmeteploki all kommentaaritekst, mille peab importimisel välja jätma.
-- **Ülesanne 4**: Omista muutujale `valik` andmestikust `andmed4` esimesed 10 rida ja kõik veerud väljaarvatud neljas ja viies. Prindi see ekraanile. 
+- **Ülesanne 4**: Omista muutujale `valik` andmestikust `andmed4` esimesed 10 rida ja kõik veerud väljaarvatud neljas ja viies. Prindi see ekraanile.
 
-
-*** =hint
+`@hint`
 - Kasuta toodud faili impordiks funktsiooni `read.csv2`
 - Andmestikust alamosa valikuks kasuta kandilisi sulge ja viitamist rea/veeru indeksitega. Negatiivne indeks jätab vastava elemendi valikust välja.
 
-
-
-
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 
 download.file("http://kodu.ut.ee/~annes/R/A.csv", "A.csv",  mode = "wb")
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 # Ülesanne 1: Omista muutujale selle argumendi nimi, mis määrab imporditava ridade arvu
 argumendinimi <- "_______________"
@@ -341,7 +334,7 @@ valik
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 # Ülesanne 1: Omista muutujale selle argumendi nimi, mis määrab imporditava ridade arvu
 argumendinimi <- "nrows"
@@ -361,7 +354,7 @@ valik
 
 ```
 
-*** =sct
+`@sct`
 ```{r}
 # 1
 test_object("argumendinimi",  
@@ -437,11 +430,17 @@ success_msg("Hästi! Liigu järgmise ülesande juurde.")
 
 ```
 
+---
 
-
-
---- type:NormalExercise lang:r xp:100 skills:3 key:b555eb5148
 ## Andmete import 5
+
+```yaml
+type: NormalExercise
+key: b555eb5148
+lang: r
+xp: 100
+skills: 3
+```
 
 Töölaual on andmestiku fail nimega *B.csv*, failis on andmed 160 isiku testitulemustega. Fail on R-i imporditud järgmise käsu abil:
 
@@ -452,31 +451,24 @@ andmed5a <- read.csv2("B.csv")
 
 Kui andmestiku objekti uurida, siis ilmneb, et midagi on impordil läinud valesti. Ülesandes peadki leidma vea ja tegema importimise käsku parandused.
 
-
-
-
-*** =instructions
+`@instructions`
 - **Ülesanne 1**: Vaata, mis on imporditud andmestiku `andmed5a` dimensioon (`dim`), millised on tunnused (`str`). Prindi ekraanile andmestiku esimese 5 veeru lõpp käsuga `tail`.
 - **Ülesanne 2**: Täienda antud koodi nii, et andmete impordi tulemus oleks korrektne (korrektne arv vaatlusi). Lisaks kasuta funktsiooni `read.csv2` argumenti, mis määraks tekstiliste tunnuste tüübiks `character` mitte `Factor`. Omista tekkiv andmestik muutujale `andmed5`. 
-- **Ülesanne 3**: Moodusta andmestik `valik`, kus oleks andmestiku `andmed5` kõik vaatlused, kuid veergudest vaid need, mille nimi algab sõnega *hinnang* või *taust*. 
+- **Ülesanne 3**: Moodusta andmestik `valik`, kus oleks andmestiku `andmed5` kõik vaatlused, kuid veergudest vaid need, mille nimi algab sõnega *hinnang* või *taust*.
 
-*** =hint
+`@hint`
 - Pane tähele, et näites imporditud andmestikuobjektis on lisaks andmetele ka failis olnud kommentaarid sisse loetud.
 - Tekstitunnuste importimisel faktorite tekitamise keelamiseks kasuta argumenti `stringsAsFactors`.
 - Viimases ülesandes saad kasutada funktsiooni `substr`. Vaata ka sarnase ülesande näidet teise praktikumi juhendist.
 
-
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 download.file("http://kodu.ut.ee/~annes/R/B.csv", "B.csv",  mode = "wb")
 andmed5a <- read.csv2("B.csv")
 
 ```
 
-
-
-
-*** =sample_code
+`@sample_code`
 ```{r}
 # Ülesanne 1: Pane kirja sobivad funktsiooninimed, ning viimases käsus sobivad indeksid
 _____(andmed5a)
@@ -494,11 +486,7 @@ valik <- __________________________
 
 ```
 
-
-
-
-
-*** =solution
+`@solution`
 ```{r}
 # Ülesanne 1: Pane kirja sobivad funktsiooninimed, ning viimases käsus sobivad indeksid
 dim(andmed5a)
@@ -515,7 +503,7 @@ valik <- andmed5[, substr(names(andmed5), 1, 5) %in% c("taust", "hinna")]
 valik
 ```
 
-*** =sct
+`@sct`
 ```{r}
 
 test_predefined_objects("andmed5a", 
@@ -605,7 +593,3 @@ success_msg("Tubli!")
 
 
 ```
-
-
-
-

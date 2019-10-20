@@ -1,8 +1,17 @@
 ---
-title       : Toimingud andmestikuga
-description : Insert the chapter description here
---- type:NormalExercise lang:r xp:100 skills:3 key:e952bf341c
+title: 'Toimingud andmestikuga'
+description: 'Insert the chapter description here'
+---
+
 ## Andmete filtreerimine tingimuse põhjal
+
+```yaml
+type: NormalExercise
+key: e952bf341c
+lang: r
+xp: 100
+skills: 3
+```
 
 Kasutame andmestikku `pojad`. Mõõdetud on perede esimese ja teise poja pea pikkus ja laius. Mõõtmised on millimeetrites. Tunnused andmestikus on järgmised:
 
@@ -11,26 +20,23 @@ Kasutame andmestikku `pojad`. Mõõdetud on perede esimese ja teise poja pea pik
 - `b1` – esimese poja pea laius
 - `b2` – teise poja pea laius
 
-
-
-*** =instructions
+`@instructions`
 - **Ülesanne 1** Töölaual on olemas andmestik  `pojad`. Prindi see ekraanile.
 - **Ülesanne 2** Moodusta tõeväärtusvektor nimega `filter`, mille väärtus on `TRUE` kui pere esimese poja pea pikkus on keskmisest suurem. Prindi loodud filter ekraanile.
 - **Ülesanne 3** Vali andmestikust alamosa: need pered, kus esimese poja pea pikkus on keskmisest suurem, kasutades eelnevalt loodud filtritunnust. Omista valitud read andmestikust objektile `pojad1`. Rakenda loodud andmestikule funktsiooni `dim()`.
 
-
-*** =hint
+`@hint`
 - Keskmise pea pikkuse esimese poja korral saad leida käsuga `mean(pojad$l1)`. Võrdluse kirjapanekuks kasuta märke `>` või `<`.
 - Andmete filtreerimiseks kasuta kas `subset` funktsiooni või kantsulge: `pojad[filter,]`.  Objektide valimiseks andmestikust tuleb filtritunnuse nimi kirjutada kantsulgusesse esimesele kohale st enne koma.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 pojad <- read.table("http://math.ut.ee/~annes/R/pojad.txt", header = T)
 
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 # Ülesanne 1: prindi andmestik ekraanile
 
@@ -47,7 +53,7 @@ ______(pojad1)
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 # Ülesanne 1: prindi andmestik ekraanile
 pojad
@@ -65,7 +71,7 @@ dim(pojad1)
 
 ```
 
-*** =sct
+`@sct`
 ```{r}
 
 test_predefined_objects("pojad", 
@@ -123,8 +129,17 @@ success_msg("Tubli!")
 
 ```
 
---- type:NormalExercise lang:r xp:100 skills:3 key:6ebe6ecdf4
+---
+
 ## Andmete filtreerimine, tingimuste kombineerimine
+
+```yaml
+type: NormalExercise
+key: 6ebe6ecdf4
+lang: r
+xp: 100
+skills: 3
+```
 
 Kasutame admestikku `kapsad`. Uuritud on kahe kapsasordi kapsapeade kaalu ja vitamiinide sisaldust.  Tunnused andmestikus on järgmised:
 
@@ -133,34 +148,25 @@ Kasutame admestikku `kapsad`. Uuritud on kahe kapsasordi kapsapeade kaalu ja vit
 - `HeadWt` - kapsapea kaal, kg
 - `VitC` - kapsapea C-vitamiini sisaldus
 
-
-
-
-*** =instructions
+`@instructions`
 - **Ülesanne 1** Töölaual on olemas andmestik  `kapsad`. Prindi selle andmestiku kirjeldus käsuga `summary()` ekraanile.
 - **Ülesanne 2** Moodusta kaks tõeväärtusvektorit. Esimene nimega `filter1`, mille väärtus on `TRUE`, kui kapsapea on sordist `c52` ja `FALSE` vastasel juhul. Teine vektor nimega `filter2`, mille väärtus on `TRUE`, kui kapsas on külvatud 21. kuupäeval (`d21`) ja `FALSE` vastasel juhul. 
 - **Ülesanne 3** Kasutades loodud filtreid ja sobivat loogilist tehet vali andmestikust alamosa: need kapsad, mis on sordist `c52` ning on külvatud 21. kuupäeval. Omista valitud read andmestikust objektile `kapsad1`. 
 - **Ülesanne 4** Kasutades loodud filtreid ja sobivat loogilist tehet vali andmestikust alamosa: need kapsad, mis on sordist `c52` või on külvatud 21. kuupäeval. Omista valitud read andmestikust objektile `kapsad2`. 
 - **Ülesanne 5** Kummas alamandmestikus on rohkem vaatlusi? Omista selle andmestiku nimi stringina muutujale  `kumbsuurem`.
 
-
- 
-
-*** =hint
+`@hint`
 - Loogilise võrdumise kontrolliks kasuta topelt võrdusmärki `==`.
 - Andmete filtreerimiseks kasuta kas `subset` funktsiooni või kantsulge: `kapsad[________,  ]`. Objektide valimiseks andmestikust tuleb filteritunnuse nimi kirjutada kantsulgusesse esimesele kohale st enne koma.
- 
 
-
-
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 kapsad <- read.table("http://math.ut.ee/~annes/R/cabbages.txt", header = T)
 
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 # Ülesanne 1: prindi andmestiku kirjeldus nõutud käsuga
 
@@ -185,7 +191,7 @@ kumbsuurem <- "__________________"
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 # Ülesanne 1: prindi andmestiku kirjeldus nõutud käsuga
 summary(kapsad)
@@ -209,7 +215,7 @@ kumbsuurem <- "kapsad2"
 
 ```
 
-*** =sct
+`@sct`
 ```{r}
 
 test_predefined_objects("kapsad", 
@@ -280,8 +286,17 @@ test_object("kumbsuurem",
 success_msg("Super! Jätka samas vaimus.")
 ```
 
---- type:NormalExercise lang:r xp:100 skills:3 key:d74da93dea
+---
+
 ## Tunnuste lisamine andmestikku
+
+```yaml
+type: NormalExercise
+key: d74da93dea
+lang: r
+xp: 100
+skills: 3
+```
 
 Analüüsi käigus on sageli vaja olemasolevaid tunnuseid teisendada või arvutada uusi tunnuseid. Andmetabelisse tunnuste lisamisel lisatakse uued veerud andmetabeli lõppu.
 
@@ -293,25 +308,22 @@ Kasutame andmestikku `pojad`. Mõõdetud on perede esimese ja teise poja pea pik
 - `b1` – esimese poja pea laius
 - `b2` – teise poja pea laius
 
-
-
-
-*** =instructions
+`@instructions`
 - **Ülesanne 1** Lisa olemasolevasse andmestikku tunnus `pikkus_vahe`, mille väärtuseks on esimese ja teise poja pea pikkuse vahe (esimene - teine).  
 - **Ülesanne 2** Lisa olemasolevasse andmestikku tunnus `laus_suhe`, mille väärtuseks on esimese ja teise poja pea laiuse suhe (esimene / teine).  
 - **Ülesanne 3** Moodusta andmestikuobjekt `uus`, kus oleks samad objektid ja samad 6 tunnust kui andmestikus `pojad`, kuid erinev oleks tunnuste järjestus andmestikus.  Andestiku `uus` tunnused peaks olema järjestuses:  `l1`, `l2`, `pikkus_vahe`, `b1`, `b2`, `laius_suhe`.
 
-*** =hint
+`@hint`
 - Tunnuse lisamiseks andmestikku saab kasutada omistamist kujul `andmed$uusveerg <- väärtused` või `andmed[, "uusveerg"] <- väärtused`.
 - veergude ümberjärjestamiseks pead kantsulgudesse teisele kohale panema uut järjestust näitava indeksite vektori või uues järjestuses veerupäiste nimedaga vektori.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 pojad <- read.table("http://math.ut.ee/~annes/R/pojad.txt", header = T)
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 # Vaata meeldetuletuseks andmestikku:
 summary(pojad)
@@ -330,7 +342,7 @@ uus <- pojad[, ____________]
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 # Vaata meeldetuletuseks andmestikku:
 summary(pojad)
@@ -350,7 +362,7 @@ uus <- pojad[, c("l1", "l2", "pikkus_vahe", "b1", "b2", "laius_suhe")]
 
 ```
 
-*** =sct
+`@sct`
 ```{r}
 
 #test_predefined_objects("pojad", 
@@ -404,31 +416,35 @@ success_msg("Tubli!")
 
 ```
 
---- type:NormalExercise lang:r xp:100 skills:3 key:085db7f347
+---
+
 ## Paranda viga andmestikus
+
+```yaml
+type: NormalExercise
+key: 085db7f347
+lang: r
+xp: 100
+skills: 3
+```
 
 Enne analüüsiga alustamist on alati vaja andmeid ka kontrollida ja võimalusel leitud vead parandada. 
 
 
 Töölaual on andmestik `dieet`. Tegu on teatavate dieetide mõju uuringuga. Uuringus osalejaid on kaalutud enne dieeti (`kaal1`) ja pärast dieeti (`kaal2`). Lisaks on teada iga inimese identifikaator ja dieedi tüüp.
- 
 
-
-*** =instructions
+`@instructions`
 - **Ülesanne 1** Töölaual on olemas andmestik  `dieet`. Prindi selle andmestiku kirjeldus käsuga `summary()` ekraanile.
 - **Ülesanne 2** Teada on, et ühel objektil on kaalu väärtus kilogrammide asemel sisestatud grammides. Leia see vaatlus ja tee parandus.
-- **Ülesanne 3** Lisaks on ühel vaatlusel teise  kaalumise väärtuse sisestamisel tekkinud viga: kaalu väärtus 350 ei ole korrektne. Kuna õiget kaalu väärtust pole enam võimalik tagantjärele saada, siis asenda vigane väärtus tühikuga. 
+- **Ülesanne 3** Lisaks on ühel vaatlusel teise  kaalumise väärtuse sisestamisel tekkinud viga: kaalu väärtus 350 ei ole korrektne. Kuna õiget kaalu väärtust pole enam võimalik tagantjärele saada, siis asenda vigane väärtus tühikuga.
 
-
-
-*** =hint
+`@hint`
 - `summary` käsust näed, et grammides kaal esineb esimese kaalutunnuse korral.
 - Et leida, millisel objektil on kaal sisestatud grammides ehk millisel objektil on `kaal1` maksimaalne, saad kasutada funktsiooni `which.max()`.
 - Andmestikus oleva väärtuse muutmiseks pead tegema omistamistehte, näiteks  kujul `andmed[veagaobjektiindeks, tunnusenr] <- õigeväärtus`.
 - Tühiku lisamiseks andmestikku kasuta funktsiooni `is.na()` abi.
 
-
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 set.seed(123)
 n <- 365
@@ -444,7 +460,7 @@ rm(n, id, grupp, kaal1, kaal2)
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 # Ülesanne 1: prindi andmestiku kirjeldus nõutud käsuga
 
@@ -460,9 +476,7 @@ rm(n, id, grupp, kaal1, kaal2)
 
 ```
 
-
-
-*** =solution
+`@solution`
 ```{r}
 # Ülesanne 1: prindi andmestiku kirjeldus nõutud käsuga
 summary(dieet)
@@ -478,7 +492,7 @@ is.na(dieet[which.max(dieet$kaal2), "kaal2"]) <- TRUE
 
 ```
 
-*** =sct
+`@sct`
 ```{r}
 
 # 1
@@ -515,14 +529,17 @@ success_msg("Tubli!")
 
 ```
 
+---
 
-
-
-
-
-
---- type:NormalExercise lang:r xp:100 skills:3 key:5085e10f46
 ## Hulgatehted
+
+```yaml
+type: NormalExercise
+key: 5085e10f46
+lang: r
+xp: 100
+skills: 3
+```
 
 Hulgatehtedeid saab R-is teha  järgmiste käskudega
 
@@ -540,20 +557,15 @@ Töölaual on olemas kaks andmestikku:
 
 Uurida tuleb vaatlusobjektide kattuvust. Loe tähelepanelikult ülesannete teksti!
 
-
-*** =instructions
-
+`@instructions`
 - **Ülesanne 1** Kontrolli id-koodi põhjal ja sobivat hulgatehet kasutades, millised isikud esinevad andmestikus `B`, kuid mitte andmestikus `A`. Omista nende isikute id-koodidide  vektor muutujale `olemasBmitteA`.
 - **Ülesanne 2** Kontrolli id-koodi põhjal, millised isikud esinevad mõlemas andmestikus. Omista nende isikute id-koodide tähestiku järgi kahanevalt järjestatud vektor muutujale `AjaB`. Vektori sorteerimiseks kasuta käsku `sort`, kaheneva järjestuse määramiseks muuda argumendi `decreasing` väärtust.
 
-
-*** =hint
+`@hint`
 - esimeses ülesandes tuleks leida hulkade vahe.
 - teises ülesandes saab kasutada ühisosa funktsiooni.
 
-
-
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 A <- read.csv2("http://kodu.ut.ee/~annes/R/A.csv", nrows = 45)
 B <- read.csv2("http://kodu.ut.ee/~annes/R/B.csv", nrows = 160)
@@ -561,7 +573,7 @@ B <- B[, c("id", "grupp", sort(names(B)[-(1:2)]))]
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 # Ülesanne 1: leia isikud, kes on andmestikus B, kuid mitte A-s
 olemasBmitteA <- ________________
@@ -572,8 +584,7 @@ AjaB <- ________________
 
 ```
 
-
-*** =solution
+`@solution`
 ```{r}
 # Ülesanne 1: leia isikud, kes on andmestikus B, kuid mitte A-s
 olemasBmitteA <- setdiff(B$id, A$id)
@@ -585,7 +596,7 @@ AjaB <- sort(intersect(B$id, A$id), decreasing = TRUE)
 
 ```
 
-*** =sct
+`@sct`
 ```{r}
 
 
@@ -672,8 +683,17 @@ success_msg("Hästi! Liigu järgmise ülesande juurde.")
 
 ```
 
---- type:NormalExercise lang:r xp:100 skills:3 key:152e584365
+---
+
 ## Andmestike ühendamine 1
+
+```yaml
+type: NormalExercise
+key: 152e584365
+lang: r
+xp: 100
+skills: 3
+```
 
 Andmestike ühendamiseks nn võtmetunnuse kaudu saab kasutada käsku `merge`. 
 
@@ -683,20 +703,15 @@ Töölaual on olemas kaks andmestikku:
 - andmestikus `A` on kirjas vastajate id-kood, sugu, elukoht, vanus, pikkus, kaal, käte siruulatus ning arstivisiidi toimumine
 - andmestikus `B` on kirjas vastajate id-kood, uuringugrupi tunnus ning vastused mitmesugustele testidele
 
-
-*** =instructions
-
+`@instructions`
 - **Ülesanne 1** Liida andmestikud id-koodi tunnuse põhjal, nimeta ühendatud andmestik nimega `uuring1`. Tulemuseks olevas andmestikus peaks olema mõlemast andmestikust kõik isikud.
 - **Ülesanne 2** Leia ühendatud andmestiku põhjal tunnuse `test101` keskväärtus ja standardhälve, omista need muuutjatele `kesk` ja `stand`.
 
-
-
-
-*** =hint
+`@hint`
 - Seda, millised objektid ühendatud andmestikku lähevad, reguleerivad käsu `merge()` argumendid `all, all.x, all.y`.
 - Keskväärtuse leidmiseks kasuta käsku `mean()`, standardhälbe jaoks `sd()`.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 A <- read.csv2("http://kodu.ut.ee/~annes/R/A.csv", nrows = 45)
 B <- read.csv2("http://kodu.ut.ee/~annes/R/B.csv", nrows = 160)
@@ -705,7 +720,7 @@ B <- B[, c("id", "grupp", sort(names(B)[-(1:2)]))]
 
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 # Ülesanne 1: Liida anmdestikud, tulemuses olgu kõik isikud mõlemast andmestikust.
 uuring1 <- merge(_____________________)
@@ -720,7 +735,7 @@ stand <- ______________
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 # Ülesanne 1: Liida anmdestikud, tulemuses olgu kõik isikud mõlemast andmestikust.
 uuring1 <- merge(A, B, by = "id", all = TRUE)
@@ -734,9 +749,7 @@ stand <- sd(uuring1$test101, na.rm = T)
 
 ```
 
-
-
-*** =sct
+`@sct`
 ```{r}
 test_predefined_objects("A", 
                         eq_condition = "equivalent",
@@ -816,11 +829,17 @@ success_msg("Hästi! Väike pingutus veel: kohe tuleb viimane ülesanne.")
 
 ```
 
+---
 
-
-
---- type:NormalExercise lang:r xp:100 skills:3 key:cf82d267f7
 ## Andmestike ühendamine 2
+
+```yaml
+type: NormalExercise
+key: cf82d267f7
+lang: r
+xp: 100
+skills: 3
+```
 
 Andmestike ühendamiseks nn võtmetunnuse kaudu saab kasutada käsku `merge`. 
 
@@ -830,9 +849,7 @@ Töölaual on olemas kaks andmestikku:
 - andmestikus `A` on kirjas vastajate id-kood, sugu, elukoht, vanus, pikkus, kaal, käte siruulatus ning arstivisiidi toimumine
 - andmestikus `B` on kirjas vastajate id-kood, uuringugrupi tunnus ning vastused mitmesugustele testidele
 
-
-*** =instructions
-
+`@instructions`
 - **Ülesanne 1** Liida andmestikud id-koodi tunnuse põhjal, nimeta ühendatud andmestik nimega `uuring2`. Tulemuseks olevas andmestikus peaks olema ainult need uuritavad, kelle kohta on teada sugu, elukoht, vanus, pikkus, kaal, käte siruulatus,  arstivisiidi toimumine, uurignugrupi tunnus ning testitulemused. St need objektid, kelle kohta on mõlemas andmestikus info olemas.
 
 - **Ülesanne 2** Tekita liidetud andmestikku veel üks sootunnus `sugu2`: uuel tunnusel lisa sootunnuse koodidele sildid: kood `0` vastab naissoole, määra siia silt `Naine`, koodile `1` lisa silt `Mees`.
@@ -843,21 +860,18 @@ Töölaual on olemas kaks andmestikku:
 
 - **Ülesanne 5** Omista mutujale `c.naisi` naiste arv uuringugrupis `c`.
 
-
-
-
-*** =hint
+`@hint`
 - Seda, millised objektid ühendatud andmestikku lähevad, reguleerivad käsu `merge()` argumendid `all, all.x, all.y`.
 - Faktortunnuse tekitamiseks kasuta käsku `factor`, koodide siltidena määra vektor `c("Naine", "Mees")`.
 
-*** =pre_exercise_code
+`@pre_exercise_code`
 ```{r}
 A <- read.csv2("http://kodu.ut.ee/~annes/R/A.csv", nrows = 45)
 B <- read.csv2("http://kodu.ut.ee/~annes/R/B.csv", nrows = 160)
 B <- B[, c("id", "grupp", sort(names(B)[-(1:2)]))]
 ```
 
-*** =sample_code
+`@sample_code`
 ```{r}
 # Ülesanne 1: Liida andmestikud, tulemuses olgu kõik isikud kel on mõlemas andmestikus info olemas.
 uuring2 <- merge(_____________________)
@@ -879,7 +893,7 @@ c.naisi <- __________
 
 ```
 
-*** =solution
+`@solution`
 ```{r}
 # Ülesanne 1:  Liida andmestikud, tulemuses olgu kõik isikud kel on mõlemas andmestikus info olemas.
 uuring2 <-  merge(A, B, by = "id", all = FALSE)
@@ -900,9 +914,7 @@ c.naisi <- 1
 
 ```
 
-
-
-*** =sct
+`@sct`
 ```{r}
 test_predefined_objects("A", 
                         eq_condition = "equivalent",
