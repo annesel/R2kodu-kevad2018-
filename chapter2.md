@@ -956,7 +956,7 @@ test_function(name = "factor",
              eq_condition = "equivalent",
              not_called_msg = "Pead ülesandes   kasutama funktsiooni `factor`",
              args_not_specified_msg = paste("Määra `factor` käsus argumendi", c("`x`", "`labels`"), "väärtus."),
-             incorrect_msg = paste("Muuda `factor` käsus argumendi", c("`x`", "`labels`"), "väärtust, see pole praegu õige", c(".", ". Kas kasutasid siltide vektoris jutumärke?")))         
+             incorrect_msg = paste("Muuda `factor` käsus argumendi", c("`x`", "`labels`"), "väärtust, see pole praegu õige", c(".", ". Kas kasutasid siltide vektoris jutumärke? Kontrolli üle ka kirjapilt.")))         
         
         
         
@@ -967,12 +967,12 @@ test_function(name = "table",
               index = 1,
              eq_condition = "equivalent",
              not_called_msg = "Pead  ülesandes 2  kasutama funktsiooni `table`",
-             args_not_specified_msg = paste("Määra `table` käsus argumendiks grupi ja soo tunnused."),
-             incorrect_msg = c("Pane `table` käsus  esikohale grupitunnus ja teisele kohale soo tunnus `sugu2`.")) 
+             args_not_specified_msg = paste("Määra `table` käsus argumendiks uuringugrupi ja soo tunnused."),
+             incorrect_msg = c("Pane `table` käsus esikohale uuringugrupi tunnus ja teisele kohale soo tunnus `sugu2`.")) 
 
    
 test_object("tabel1",  
-            undefined_msg = "Muutuja  `tabel1` on defineerimata.",
+            undefined_msg = "Muutuja `tabel1` on defineerimata.",
             incorrect_msg = "Muutuja `tabel1` väärtus ei ole korrektne. Proovi uuesti.") 
            
 
@@ -987,13 +987,13 @@ test_function(name = "prop.table",
               args = c("x", "margin"),
               index = 1,
              eq_condition = "equivalent",
-             not_called_msg = "Pead  ülesandes 2  kasutama funktsiooni `prop.table`",
+             not_called_msg = "Pead ülesandes 2 kasutama funktsiooni `prop.table`",
              args_not_specified_msg = paste("Määra `prop.table` käsus argumendi", c("`x`", "`margin`"), "väärtus."),
-             incorrect_msg = c("Pane `prop.table` käsus  esiemseks argumendiks sagedustabel", "Pane `prop.table` käsus teiseks argumendiks  `margin = 1`")) 
+             incorrect_msg = c("Pane `prop.table` käsus  esimeseks argumendiks sagedustabel", "Pane `prop.table` käsus teiseks argumendiks  `margin = 1`")) 
 
    
 test_object("tabel2",  
-            undefined_msg = "Muutuja  `tabel2` on defineerimata.",
+            undefined_msg = "Muutuja `tabel2` on defineerimata.",
             incorrect_msg = "Muutuja `tabel2` väärtus ei ole korrektne. Proovi uuesti.") 
            
              
@@ -1001,7 +1001,7 @@ test_object("tabel2",
 #5
  
 test_object("c.naisi",  
-            undefined_msg = "Muutuja  `c.naisi` on defineerimata.",
+            undefined_msg = "Muutuja `c.naisi` on defineerimata.",
             incorrect_msg = "Muutuja `c.naisi` väärtus ei ole korrektne. vaata väärtust sagedustabelist") 
            
                         
