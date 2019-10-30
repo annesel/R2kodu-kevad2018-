@@ -454,12 +454,12 @@ Kui andmestiku objekti uurida, siis ilmneb, et midagi on impordil läinud valest
 `@instructions`
 - **Ülesanne 1**: Vaata, mis on imporditud andmestiku `andmed5a` dimensioon (`dim`), millised on tunnused (`str`). Prindi ekraanile andmestiku esimese 5 veeru lõpp käsuga `tail`.
 - **Ülesanne 2**: Täienda antud koodi nii, et andmete impordi tulemus oleks korrektne (korrektne arv vaatlusi). Lisaks kasuta funktsiooni `read.csv2` argumenti, mis määraks tekstiliste tunnuste tüübiks `character` mitte `Factor`. Omista tekkiv andmestik muutujale `andmed5`. 
-- **Ülesanne 3**: Moodusta andmestik `valik`, kus oleks andmestiku `andmed5` kõik vaatlused, kuid veergudest vaid need, mille nimi algab sõnega *hinnang* või *taust*.
+- **Ülesanne 3**: Moodusta andmestik `valik`, kus oleks andmestiku `andmed5` kõik vaatlused, kuid veergudest vaid need, mille nimi algab sõnega *hinnang* või *taust*. Kasuta veergude valikul  funktsiooni `StartsWith`.
 
 `@hint`
 - Pane tähele, et näites imporditud andmestikuobjektis on lisaks andmetele ka failis olnud kommentaarid sisse loetud.
 - Tekstitunnuste importimisel faktorite tekitamise keelamiseks kasuta argumenti `stringsAsFactors`.
-- Viimases ülesandes saad kasutada funktsiooni `substr`. Vaata ka sarnase ülesande näidet teise praktikumi juhendist.
+- Viimases ülesandes saad kasutada funktsiooni `StartsWith`. Vaata ka sarnase ülesande näidet teise praktikumi juhendist.
 
 `@pre_exercise_code`
 ```{r}
@@ -499,7 +499,8 @@ andmed5 <- read.csv2(file = "B.csv", nrows = 160, stringsAsFactors = FALSE)
 
 
 # Ülesanne 3: vali andmestikust nõutud alamosa
-valik <- andmed5[, substr(names(andmed5), 1, 5) %in% c("taust", "hinna")]
+#valik <- andmed5[, substr(names(andmed5), 1, 5) %in% c("taust", "hinna")]
+valik <- andmed5[, StartsWith(names(andmed5), c("hinnang", "taust"))]
 valik
 ```
 
