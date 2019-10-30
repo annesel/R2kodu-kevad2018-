@@ -454,12 +454,12 @@ Kui andmestiku objekti uurida, siis ilmneb, et midagi on impordil läinud valest
 `@instructions`
 - **Ülesanne 1**: Vaata, mis on imporditud andmestiku `andmed5a` dimensioon (`dim`), millised on tunnused (`str`). Prindi ekraanile andmestiku esimese 5 veeru lõpp käsuga `tail`.
 - **Ülesanne 2**: Täienda antud koodi nii, et andmete impordi tulemus oleks korrektne (korrektne arv vaatlusi). Lisaks kasuta funktsiooni `read.csv2` argumenti, mis määraks tekstiliste tunnuste tüübiks `character` mitte `Factor`. Omista tekkiv andmestik muutujale `andmed5`. 
-- **Ülesanne 3**: Moodusta andmestik `valik`, kus oleks andmestiku `andmed5` kõik vaatlused, kuid veergudest vaid need, mille nimi algab sõnega *hinnang* või *taust*. Kasuta veergude valikul  funktsiooni `StartsWith`.
+- **Ülesanne 3**: Moodusta andmestik `valik`, kus oleks andmestiku `andmed5` kõik vaatlused, kuid veergudest vaid need, mille nimi algab sõnega *hinnang* või *taust*. Kasuta veergude valikul  funktsiooni `startsWith`.
 
 `@hint`
 - Pane tähele, et näites imporditud andmestikuobjektis on lisaks andmetele ka failis olnud kommentaarid sisse loetud.
 - Tekstitunnuste importimisel faktorite tekitamise keelamiseks kasuta argumenti `stringsAsFactors`.
-- Viimases ülesandes saad kasutada funktsiooni `StartsWith`. Vaata ka sarnase ülesande näidet teise praktikumi juhendist.
+- Viimases ülesandes saad kasutada funktsiooni `startsWith`. Vaata ka sarnase ülesande näidet teise praktikumi juhendist.
 
 `@pre_exercise_code`
 ```{r}
@@ -500,7 +500,7 @@ andmed5 <- read.csv2(file = "B.csv", nrows = 160, stringsAsFactors = FALSE)
 
 # Ülesanne 3: vali andmestikust nõutud alamosa
 #valik <- andmed5[, substr(names(andmed5), 1, 5) %in% c("taust", "hinna")]
-valik <- andmed5[, StartsWith(names(andmed5), c("hinnang", "taust"))]
+valik <- andmed5[, startsWith(names(andmed5), c("hinnang", "taust"))]
 valik
 ```
 
@@ -577,13 +577,14 @@ test_data_frame("andmed5",
 #test_object("valik",  
 #            undefined_msg = "Objekt `valik` on defineerimata.",
 #            incorrect_msg = "Objekti `valik` väärtus ei ole korrektne. Proovi nõutud veergude valik uuesti teha.") 
-test_function(name = "StartsWith",
+
+test_function(name = "startsWith",
               args = c("x", "prefix"),
               index = 1,
              eq_condition = "equivalent",
-             not_called_msg = "Kolmandas ülesandes pead kasutama funktsiooni `StartsWith`",
-             args_not_specified_msg = paste("Määra `StartsWith` käsus argumendi", c("`x`", "`prefix`"), "väärtus."),
-             incorrect_msg = paste("Oled funktsioonis `StartsWith` andnud vale väärtuse argumendile",  c("`x`", "`prefix`"),". Määra selle funktsiooni esimeseks argumendiks `names(andmed5)` ja teiseks argumendiks vektor `c("hinnang", "taust")`.")) 
+             not_called_msg = "Kolmandas ülesandes pead kasutama funktsiooni `startsWith`",
+             args_not_specified_msg = paste("Määra `startsWith` käsus argumendi", c("`x`", "`prefix`"), "väärtus."),
+             incorrect_msg = paste("Oled funktsioonis `startsWith` andnud vale väärtuse argumendile",  c("`x`", "`prefix`"),". Määra selle funktsiooni esimeseks argumendiks `names(andmed5)` ja teiseks argumendiks vektor `c("hinnang", "taust")`.")) 
  #    not_called_msg: in case the student did not call the function
 #    args_not_specified_msg: in case the student did not specify all arguments listed in args.
 #    incorrect_msg: in the case the student did not correctly specify all arguments listed in args.
