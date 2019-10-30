@@ -297,7 +297,7 @@ Funktsioonide `read.csv()` ja `read.csv2()` kasutamine.
 Impordi andmed failist *A.csv*.
 
 `@instructions`
-- **Ülesanne 1** Loe funktsioonide `read.csv()` ja `read.csv2()` abilehte. Tee kindlaks, mis argumendi abil saab määrata maksimaalse imporditava ridade arvu. Omista selle argumendi nimi stringina muutujale nimega `argumendinimi`.
+- **Ülesanne 1**: Loe funktsioonide `read.csv()` ja `read.csv2()` abilehte. Tee kindlaks, mis argumendi abil saab määrata maksimaalse imporditava ridade arvu. Omista selle argumendi nimi stringina muutujale nimega `argumendinimi`.
 - **Ülesanne 2**: Kontrolli, kas fail *A.csv*  on juba töökaustas olemas, kasuta selleks käsku `list.files()`. Tulemuseks peab olema faili nimi. Faili saad vaadata ka aadressil *http://kodu.ut.ee/~annes/R/A.csv*  
 - **Ülesanne 3**: Impordi failist *A.csv* andmed, kasuta selleks funktsiooni `read.csv()` või `read.csv2()`, vali see funktsioon, mille korral pead vähem argumente väärtustama st see, mis argumentide vaikeväärtuste poolest paremini sobib.  Omista andmestik muutujale `andmed4`.  Pane tähele, et failis on andmeteploki all kommentaaritekst, mille peab importimisel välja jätma.
 - **Ülesanne 4**: Omista muutujale `valik` andmestikust `andmed4` esimesed 10 rida ja kõik veerud väljaarvatud neljas ja viies. Prindi see ekraanile.
@@ -442,7 +442,7 @@ xp: 100
 skills: 3
 ```
 
-Töölaual on andmestiku fail nimega *B.csv*, failis on andmed 160 isiku testitulemustega. Fail on R-i imporditud järgmise käsu abil:
+Töökaustas on andmestiku fail nimega *B.csv*, failis on andmed 160 isiku testitulemustega. Fail on R-i imporditud järgmise käsu abil:
 
 ```{r, prompt = T}
 andmed5a <- read.csv2("B.csv")
@@ -576,6 +576,17 @@ test_data_frame("andmed5",
 #test_object("valik",  
 #            undefined_msg = "Objekt `valik` on defineerimata.",
 #            incorrect_msg = "Objekti `valik` väärtus ei ole korrektne. Proovi nõutud veergude valik uuesti teha.") 
+test_function(name = "StartsWith",
+              args = c("x", "prefix"),
+              index = 1,
+             eq_condition = "equivalent",
+             not_called_msg = "Kolmandas ülesandes pead kasutama funktsiooni `StartsWith`",
+             args_not_specified_msg = paste("Määra `StartsWith` käsus argumendi", c("`x`", "`prefix`"), "väärtus."),
+             incorrect_msg = paste("Oled funktsioonis `StartsWith` andnud vale väärtuse argumendile",  c("`x`", "`prefix`"),". Määra selle funktsiooni esimeseks argumendiks `names(andmed5)` ja teiseks argumendiks vektor `c("hinnang", "taust")`.")) 
+ #    not_called_msg: in case the student did not call the function
+#    args_not_specified_msg: in case the student did not specify all arguments listed in args.
+#    incorrect_msg: in the case the student did not correctly specify all arguments listed in args.
+
 test_data_frame("valik",  
                 columns = NULL,
                 eq_condition = "equal",
