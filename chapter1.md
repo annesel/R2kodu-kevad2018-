@@ -584,7 +584,8 @@ test_function(name = "startsWith",
              eq_condition = "equivalent",
              not_called_msg = "Kolmandas ülesandes pead kasutama funktsiooni `startsWith`",
              args_not_specified_msg = paste("Määra `startsWith` käsus argumendi", c("`x`", "`prefix`"), "väärtus."),
-             incorrect_msg = paste("Oled funktsioonis `startsWith` andnud vale väärtuse argumendile",  c("`x`", "`prefix`"),". Määra selle funktsiooni esimeseks argumendiks `names(andmed5)` ja teiseks argumendiks vektor `c("hinnang", "taust")`.")) 
+             incorrect_msg = paste("Oled funktsioonis `startsWith` andnud vale väärtuse argumendile",  c("`x`", "`prefix`"), ". Määra selle funktsiooni esimeseks 
+			argumendiks `names(andmed5)` ja teiseks argumendiks vektor `c("hinnang", "taust")`.")) 
  #    not_called_msg: in case the student did not call the function
 #    args_not_specified_msg: in case the student did not specify all arguments listed in args.
 #    incorrect_msg: in the case the student did not correctly specify all arguments listed in args.
