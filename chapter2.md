@@ -94,7 +94,7 @@ test_object("filter",
 
 test_output_contains(expr = "filter",
                      times = 1,
-                     incorrect_msg = "ÜL2: filteritunnus on ekraanile printimata.")
+                     incorrect_msg = "ÜL2: filtritunnus on ekraanile printimata.")
 
 #3
 #test_object("pojad1",  
@@ -400,7 +400,7 @@ test_data_frame("uus",
             columns = c("l1", "l2", "pikkus_vahe", "b1", "b2", "laius_suhe"),
                 undefined_msg = "Kas moodustasid uue andmestiku `uus`?",
                 undefined_cols_msg = "Kas oled andmestikku `uus` valinud kõik nõutud veerud?",
-                incorrect_msg = "Kas oled andmestiku `uus` veerud määranud nii nagu vaja?")
+                incorrect_msg = "Kas oled andmestiku `uus` veerud järjestanud nii nagu vaja?")
 
   
 
