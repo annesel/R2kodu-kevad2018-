@@ -21,9 +21,9 @@ Kasutame andmestikku `pojad`. Mõõdetud on perede esimese ja teise poja pea pik
 - `b2` – teise poja pea laius
 
 `@instructions`
-- **Ülesanne 1** Töölaual on olemas andmestik  `pojad`. Prindi see ekraanile.
-- **Ülesanne 2** Moodusta tõeväärtusvektor nimega `filter`, mille väärtus on `TRUE` kui pere esimese poja pea pikkus on keskmisest suurem. Prindi loodud filter ekraanile.
-- **Ülesanne 3** Vali andmestikust alamosa: need pered, kus esimese poja pea pikkus on keskmisest suurem, kasutades eelnevalt loodud filtritunnust. Omista valitud read andmestikust objektile `pojad1`. Rakenda loodud andmestikule funktsiooni `dim()`.
+- **Ülesanne 1**: Töölaual on olemas andmestik  `pojad`. Prindi see ekraanile.
+- **Ülesanne 2**: Moodusta tõeväärtusvektor nimega `filter`, mille väärtus on `TRUE` kui pere esimese poja pea pikkus on keskmisest suurem. Prindi loodud filter ekraanile.
+- **Ülesanne 3**: Vali andmestikust alamosa: need pered, kus esimese poja pea pikkus on keskmisest suurem, kasutades eelnevalt loodud filtritunnust. Omista valitud read andmestikust objektile `pojad1`. Rakenda loodud andmestikule funktsiooni `dim()`.
 
 `@hint`
 - Keskmise pea pikkuse esimese poja korral saad leida käsuga `mean(pojad$l1)`. Võrdluse kirjapanekuks kasuta märke `>` või `<`.
@@ -149,11 +149,11 @@ Kasutame admestikku `kapsad`. Uuritud on kahe kapsasordi kapsapeade kaalu ja vit
 - `VitC` - kapsapea C-vitamiini sisaldus
 
 `@instructions`
-- **Ülesanne 1** Töölaual on olemas andmestik  `kapsad`. Prindi selle andmestiku kirjeldus käsuga `summary()` ekraanile.
-- **Ülesanne 2** Moodusta kaks tõeväärtusvektorit. Esimene nimega `filter1`, mille väärtus on `TRUE`, kui kapsapea on sordist `c52` ja `FALSE` vastasel juhul. Teine vektor nimega `filter2`, mille väärtus on `TRUE`, kui kapsas on külvatud 21. kuupäeval (`d21`) ja `FALSE` vastasel juhul. 
-- **Ülesanne 3** Kasutades loodud filtreid ja sobivat loogilist tehet vali andmestikust alamosa: need kapsad, mis on sordist `c52` ning on külvatud 21. kuupäeval. Omista valitud read andmestikust objektile `kapsad1`. 
-- **Ülesanne 4** Kasutades loodud filtreid ja sobivat loogilist tehet vali andmestikust alamosa: need kapsad, mis on sordist `c52` või on külvatud 21. kuupäeval. Omista valitud read andmestikust objektile `kapsad2`. 
-- **Ülesanne 5** Kummas alamandmestikus on rohkem vaatlusi? Omista selle andmestiku nimi stringina muutujale  `kumbsuurem`.
+- **Ülesanne 1**: Töölaual on olemas andmestik  `kapsad`. Prindi selle andmestiku kirjeldus käsuga `summary()` ekraanile.
+- **Ülesanne 2**: Moodusta kaks tõeväärtusvektorit. Esimene nimega `filter1`, mille väärtus on `TRUE`, kui kapsapea on sordist `c52` ja `FALSE` vastasel juhul. Teine vektor nimega `filter2`, mille väärtus on `TRUE`, kui kapsas on külvatud 21. kuupäeval (`d21`) ja `FALSE` vastasel juhul. 
+- **Ülesanne 3**: Kasutades loodud filtreid ja sobivat loogilist tehet vali andmestikust alamosa: need kapsad, mis on sordist `c52` ning on külvatud 21. kuupäeval. Omista valitud read andmestikust objektile `kapsad1`. 
+- **Ülesanne 4**: Kasutades loodud filtreid ja sobivat loogilist tehet vali andmestikust alamosa: need kapsad, mis on sordist `c52` või on külvatud 21. kuupäeval. Omista valitud read andmestikust objektile `kapsad2`. 
+- **Ülesanne 5**: Kummas alamandmestikus on rohkem vaatlusi? Omista selle andmestiku nimi stringina muutujale  `kumbsuurem`.
 
 `@hint`
 - Loogilise võrdumise kontrolliks kasuta topelt võrdusmärki `==`.
@@ -309,9 +309,9 @@ Kasutame andmestikku `pojad`. Mõõdetud on perede esimese ja teise poja pea pik
 - `b2` – teise poja pea laius
 
 `@instructions`
-- **Ülesanne 1** Lisa olemasolevasse andmestikku tunnus `pikkus_vahe`, mille väärtuseks on esimese ja teise poja pea pikkuse vahe (esimene - teine).  
-- **Ülesanne 2** Lisa olemasolevasse andmestikku tunnus `laus_suhe`, mille väärtuseks on esimese ja teise poja pea laiuse suhe (esimene / teine).  
-- **Ülesanne 3** Moodusta andmestikuobjekt `uus`, kus oleks samad objektid ja samad 6 tunnust kui andmestikus `pojad`, kuid erinev oleks tunnuste järjestus andmestikus.  Andestiku `uus` tunnused peaks olema järjestuses:  `l1`, `l2`, `pikkus_vahe`, `b1`, `b2`, `laius_suhe`.
+- **Ülesanne 1**: Lisa olemasolevasse andmestikku tunnus `pikkus_vahe`, mille väärtuseks on esimese ja teise poja pea pikkuse vahe (esimene - teine).  
+- **Ülesanne 2**: Lisa olemasolevasse andmestikku tunnus `laus_suhe`, mille väärtuseks on esimese ja teise poja pea laiuse suhe (esimene / teine).  
+- **Ülesanne 3**: Moodusta andmestikuobjekt `uus`, kus oleks samad objektid ja samad 6 tunnust kui andmestikus `pojad`, kuid erinev oleks tunnuste järjestus andmestikus.  Andestiku `uus` tunnused peaks olema järjestuses:  `l1`, `l2`, `pikkus_vahe`, `b1`, `b2`, `laius_suhe`.
 
 `@hint`
 - Tunnuse lisamiseks andmestikku saab kasutada omistamist kujul `andmed$uusveerg <- väärtused` või `andmed[, "uusveerg"] <- väärtused`.
@@ -434,9 +434,9 @@ Enne analüüsiga alustamist on alati vaja andmeid ka kontrollida ja võimalusel
 Töölaual on andmestik `dieet`. Tegu on teatavate dieetide mõju uuringuga. Uuringus osalejaid on kaalutud enne dieeti (`kaal1`) ja pärast dieeti (`kaal2`). Lisaks on teada iga inimese identifikaator ja dieedi tüüp.
 
 `@instructions`
-- **Ülesanne 1** Töölaual on olemas andmestik  `dieet`. Prindi selle andmestiku kirjeldus käsuga `summary()` ekraanile.
-- **Ülesanne 2** Teada on, et ühel objektil on kaalu väärtus kilogrammide asemel sisestatud grammides. Leia see vaatlus ja tee parandus.
-- **Ülesanne 3** Lisaks on ühel vaatlusel teise  kaalumise väärtuse sisestamisel tekkinud viga: kaalu väärtus 350 ei ole korrektne. Kuna õiget kaalu väärtust pole enam võimalik tagantjärele saada, siis asenda vigane väärtus tühikuga.
+- **Ülesanne 1**: Töölaual on olemas andmestik  `dieet`. Prindi selle andmestiku kirjeldus käsuga `summary()` ekraanile.
+- **Ülesanne 2**: Teada on, et ühel objektil on kaalu väärtus kilogrammide asemel sisestatud grammides. Leia see vaatlus ja tee parandus.
+- **Ülesanne 3**: Lisaks on ühel vaatlusel teise  kaalumise väärtuse sisestamisel tekkinud viga: kaalu väärtus 350 ei ole korrektne. Kuna õiget kaalu väärtust pole enam võimalik tagantjärele saada, siis asenda vigane väärtus tühikuga.
 
 `@hint`
 - `summary` käsust näed, et grammides kaal esineb esimese kaalutunnuse korral.
@@ -558,8 +558,8 @@ Töölaual on olemas kaks andmestikku:
 Uurida tuleb vaatlusobjektide kattuvust. Loe tähelepanelikult ülesannete teksti!
 
 `@instructions`
-- **Ülesanne 1** Kontrolli id-koodi põhjal ja sobivat hulgatehet kasutades, millised isikud esinevad andmestikus `B`, kuid mitte andmestikus `A`. Omista nende isikute id-koodidide  vektor muutujale `olemasBmitteA`.
-- **Ülesanne 2** Kontrolli id-koodi põhjal, millised isikud esinevad mõlemas andmestikus. Omista nende isikute id-koodide tähestiku järgi kahanevalt järjestatud vektor muutujale `AjaB`. Vektori sorteerimiseks kasuta käsku `sort`, kaheneva järjestuse määramiseks muuda argumendi `decreasing` väärtust.
+- **Ülesanne 1**: Kontrolli id-koodi põhjal ja sobivat hulgatehet kasutades, millised isikud esinevad andmestikus `B`, kuid mitte andmestikus `A`. Omista nende isikute id-koodidide  vektor muutujale `olemasBmitteA`.
+- **Ülesanne 2**: Kontrolli id-koodi põhjal, millised isikud esinevad mõlemas andmestikus. Omista nende isikute id-koodide tähestiku järgi kahanevalt järjestatud vektor muutujale `AjaB`. Vektori sorteerimiseks kasuta käsku `sort`, kaheneva järjestuse määramiseks muuda argumendi `decreasing` väärtust.
 
 `@hint`
 - esimeses ülesandes tuleks leida hulkade vahe.
@@ -704,8 +704,8 @@ Töölaual on olemas kaks andmestikku:
 - andmestikus `B` on kirjas vastajate id-kood, uuringugrupi tunnus ning vastused mitmesugustele testidele
 
 `@instructions`
-- **Ülesanne 1** Liida andmestikud id-koodi tunnuse põhjal, nimeta ühendatud andmestik nimega `uuring1`. Tulemuseks olevas andmestikus peaks olema mõlemast andmestikust kõik isikud.
-- **Ülesanne 2** Leia ühendatud andmestiku põhjal tunnuse `test101` keskväärtus ja standardhälve, omista need muuutjatele `kesk` ja `stand`.
+- **Ülesanne 1**: Liida andmestikud id-koodi tunnuse põhjal, nimeta ühendatud andmestik nimega `uuring1`. Tulemuseks olevas andmestikus peaks olema mõlemast andmestikust kõik isikud.
+- **Ülesanne 2**: Leia ühendatud andmestiku põhjal tunnuse `test101` keskväärtus ja standardhälve, omista need muuutjatele `kesk` ja `stand`.
 
 `@hint`
 - Seda, millised objektid ühendatud andmestikku lähevad, reguleerivad käsu `merge()` argumendid `all, all.x, all.y`.
@@ -850,15 +850,15 @@ Töölaual on olemas kaks andmestikku:
 - andmestikus `B` on kirjas vastajate id-kood, uuringugrupi tunnus ning vastused mitmesugustele testidele
 
 `@instructions`
-- **Ülesanne 1** Liida andmestikud id-koodi tunnuse põhjal, nimeta ühendatud andmestik nimega `uuring2`. Tulemuseks olevas andmestikus peaks olema ainult need uuritavad, kelle kohta on teada sugu, elukoht, vanus, pikkus, kaal, käte siruulatus,  arstivisiidi toimumine, uurignugrupi tunnus ning testitulemused. St need objektid, kelle kohta on mõlemas andmestikus info olemas.
+- **Ülesanne 1**: Liida andmestikud id-koodi tunnuse põhjal, nimeta ühendatud andmestik nimega `uuring2`. Tulemuseks olevas andmestikus peaks olema ainult need uuritavad, kelle kohta on teada sugu, elukoht, vanus, pikkus, kaal, käte siruulatus,  arstivisiidi toimumine, uurignugrupi tunnus ning testitulemused. St need objektid, kelle kohta on mõlemas andmestikus info olemas.
 
-- **Ülesanne 2** Tekita liidetud andmestikku veel üks sootunnus `sugu2`: uuel tunnusel lisa sootunnuse koodidele sildid: kood `0` vastab naissoole, määra siia silt `Naine`, koodile `1` lisa silt `Mees`.
+- **Ülesanne 2**: Tekita liidetud andmestikku veel üks sootunnus `sugu2`: uuel tunnusel lisa sootunnuse koodidele sildid: kood `0` vastab naissoole, määra siia silt `Naine`, koodile `1` lisa silt `Mees`.
 
-- **Ülesanne 3** Leia liidetud andmestiku korral uuringugrupi tunnuse ja soo sagedustabel, nii, et uurignugrupi tunnus määrab tabeli read. Kasuta seda sootunnust, mille tekitasid eelmises ülesandes. Omista tabel muutujale `tabel1`, prindi see tabel ekraanile.
+- **Ülesanne 3**: Leia liidetud andmestiku korral uuringugrupi tunnuse ja soo sagedustabel, nii, et uuringugrupi tunnus määrab tabeli read. Kasuta seda sootunnust, mille tekitasid eelmises ülesandes. Omista tabel muutujale `tabel1`, prindi see tabel ekraanile.
 
-- **Ülesanne 4** Kasutades eelnevalt leitud sagedustabelit leia tabel, kust oleks näha soo jaotus uuringugrupiti. Omista see muutujale `tabel2`, prindi ekraanile.
+- **Ülesanne 4**: Kasutades eelnevalt leitud sagedustabelit leia tabel, kust oleks näha soo jaotus uuringugrupiti. Omista see muutujale `tabel2`, prindi ekraanile.
 
-- **Ülesanne 5** Omista mutujale `c.naisi` naiste arv uuringugrupis `c`.
+- **Ülesanne 5**: Omista mutujale `c.naisi` naiste arv uuringugrupis `c`.
 
 `@hint`
 - Seda, millised objektid ühendatud andmestikku lähevad, reguleerivad käsu `merge()` argumendid `all, all.x, all.y`.
@@ -956,7 +956,7 @@ test_function(name = "factor",
              eq_condition = "equivalent",
              not_called_msg = "Pead ülesandes   kasutama funktsiooni `factor`",
              args_not_specified_msg = paste("Määra `factor` käsus argumendi", c("`x`", "`labels`"), "väärtus."),
-             incorrect_msg = paste("Muuda `factor` käsus argumendi", c("`x`", "`labels`"), "väärtust, see pole praegu õige."))         
+             incorrect_msg = paste("Muuda `factor` käsus argumendi", c("`x`", "`labels`"), "väärtust, see pole praegu õige", c(".", ". Kas kasutasid siltide vektoris jutumärke?")))         
         
         
         

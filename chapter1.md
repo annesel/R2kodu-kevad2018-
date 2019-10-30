@@ -18,8 +18,8 @@ Andmete impordiks tekstifailist saab kasutada käsku `read.table()`.
 Funktsiooni `read.table()` argumentide abil saab paika panna, mis on imporditavas failis veergude eraldaja, mis sümbolit kasutatakse kümnendkoha määramisel, kas veergudel on olemas nimed jne.
 
 `@instructions`
-- **Ülesanne 1** Kasutades käsku `read.table()` impordi R-i fail nimega *katsed.txt* aadressilt  *http://kodu.ut.ee/~annes/R/katsed.txt*, omista andmestik muutujale `andmed1`. Prindi andmestik ekraanile.
-- **Ülesanne 2** Vaata andmestiku struktuuri käsuga `str()`.
+- **Ülesanne 1**: Kasutades käsku `read.table()` impordi R-i fail nimega *katsed.txt* aadressilt  *http://kodu.ut.ee/~annes/R/katsed.txt*, omista andmestik muutujale `andmed1`. Prindi andmestik ekraanile.
+- **Ülesanne 2**: Vaata andmestiku struktuuri käsuga `str()`.
 
 `@hint`
 - Ava fail brauseri aknas ja vaata, mis on veergude eraldaja. 
@@ -130,8 +130,8 @@ skills: 3
 Impordi andmed tekstifailist *http://kodu.ut.ee/~annes/R/tulemused.txt*. Failis on kirjas inimeste nimed ja nende testitulemused.  Pööra tähelepanu sellele, mis on failis tunnuseveergude eraldaja ning kuidas on esitatud murdarvud.
 
 `@instructions`
-- **Ülesanne 1** Kasutades käsku `read.table()` impordi R-i fail *tulemused.txt* aadressilt  *http://kodu.ut.ee/~annes/R/tulemused.txt*, omista andmestik muutujale `andmed2`. Prindi andmestik ekraanile
-- **Ülesanne 2** Vaata andmestiku tunnuste ülevaadet käsuga `summary()`.
+- **Ülesanne 1**: Kasutades käsku `read.table()` impordi R-i fail *tulemused.txt* aadressilt  *http://kodu.ut.ee/~annes/R/tulemused.txt*, omista andmestik muutujale `andmed2`. Prindi andmestik ekraanile
+- **Ülesanne 2**: Vaata andmestiku tunnuste ülevaadet käsuga `summary()`.
 
 `@hint`
 - Ava fail brauseri aknas ja vaata, mis on veergude eraldaja ja milline sümbol on kümnendkohtade eraldajaks.
@@ -251,9 +251,9 @@ Vaata abiinfot funktsioonile `read.csv`. Selleks kirjuta käsureale:
 
 ```
 
-Loe avanevast failist funktsiooni argumentide ja töö kirjeldust.
+Loe avanevast failist funktsiooni argumentide ja töö kirjeldust. Nagu selgub võib selles funktsioonis kasutada samu argumente kui funktsioonis `read.table`.
 
-Seejärel vali õige vastusevariant.
+Vali alltoodud väidetest see, mis on tõene.
 
 `@possible_answers`
 - Funktsiooni `read.csv` argumentide vaikeväärtused määravad, et imporditavas failis peab väljaeraldajaks olema semikoolon.
@@ -303,7 +303,8 @@ Impordi andmed failist *A.csv*.
 - **Ülesanne 4**: Omista muutujale `valik` andmestikust `andmed4` esimesed 10 rida ja kõik veerud väljaarvatud neljas ja viies. Prindi see ekraanile.
 
 `@hint`
-- Kasuta toodud faili impordiks funktsiooni `read.csv2`
+- Nagu selgub võib neis funktsioonides kasutada samu argumente kui funktsioonis `read.table`.  
+- Kasuta toodud faili impordiks funktsiooni `read.csv2`.
 - Andmestikust alamosa valikuks kasuta kandilisi sulge ja viitamist rea/veeru indeksitega. Negatiivne indeks jätab vastava elemendi valikust välja.
 
 `@pre_exercise_code`
