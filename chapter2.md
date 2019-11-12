@@ -310,7 +310,7 @@ Kasutame andmestikku `pojad`. Mõõdetud on perede esimese ja teise poja pea pik
 
 `@instructions`
 - **Ülesanne 1**: Lisa olemasolevasse andmestikku tunnus `pikkus_vahe`, mille väärtuseks on esimese ja teise poja pea pikkuse vahe (esimene - teine).  
-- **Ülesanne 2**: Lisa olemasolevasse andmestikku tunnus `laus_suhe`, mille väärtuseks on esimese ja teise poja pea laiuse suhe (esimene / teine).  
+- **Ülesanne 2**: Lisa olemasolevasse andmestikku tunnus `laius_suhe`, mille väärtuseks on esimese ja teise poja pea laiuse suhe (esimene / teine).  
 - **Ülesanne 3**: Moodusta andmestikuobjekt `uus`, kus oleks samad objektid ja samad 6 tunnust kui andmestikus `pojad`, kuid erinev oleks tunnuste järjestus andmestikus.  Andestiku `uus` tunnused peaks olema järjestuses:  `l1`, `l2`, `pikkus_vahe`, `b1`, `b2`, `laius_suhe`.
 
 `@hint`
@@ -402,7 +402,11 @@ test_data_frame("uus",
                 undefined_cols_msg = "Kas oled andmestikku `uus` valinud kõik nõutud veerud?",
                 incorrect_msg = "Kas oled andmestiku `uus` veerud järjestanud nii nagu vaja?")
 
-  
+test_object("uus", 
+            eq_condition = "equal",
+             undefined_msg = "Kas moodustasid uue andmestiku `uus`?",
+             incorrect_msg = "Kas oled andmestiku `uus` veerud järjestanud nii nagu vaja?")
+
 
 
 #
